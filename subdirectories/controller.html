@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/style.css" />
+	<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase.js"></script>
+	<script src="../js/settings.js"></script>
+    <title>Light Sensor Company</title>
+  </head>
+  <h1 style=color:#f6ae2d> Light Sensor Company</h1>
+  <body>
+    <div class="header">
+      <bold>
+        <h4>
+			<a href="../index.html">Home</a>
+			&nbsp;
+			<a href="../subdirectories/aboutus.html">About Us</a>
+			&nbsp;
+			<a href="../subdirectories/ourmission.html">Our Mission</a>
+			&nbsp;
+			<a href="../subdirectories/products.html">Products</a>
+			&nbsp;
+			<a href="../subdirectories/controller.html">Control your lights</a>
+        </h4>
+      </bold>
+    </div>
+    <br />
+    <br />
+    <p>
+      Welcome to the Light Sensor Company control centre.
+	  <br>
+	  <button onclick="status()">Check Light Status</button>
+	  <br>
+	  <button onclick="turnOn()">Turn Lights On</button>
+	  <button onclick="turnOff()">Turn Lights Off</button>
+      <br>
+      <input type="number" placeholder="Select the brightness you want (1-255)" min="1" max="255" style="width:300px" id="desiredLightLevel"></input>
+	  <br>
+	  <input type="number" placeholder="Light level you want the lights to turn on at" min="1" max="255" style="width:300px" id="lightThreshold"></input>
+	  <br>
+	  <!--<input type="time" placeholder="Time you would like the lights to turn on at" id="timeLightsOn"></input>
+	  <br>
+	  <input type="time" placeholder="Time you would like the lights to turn off at" id="timeLightsOff"></input>-->
+	  
+	  
+	  <!--<input type="number" placeholder="Light level you would like the lights to turn off at" style="width:300px"></input>
+	  <br>-->
+	  <button onclick="updateSettings()">Submit</button>
+	  <br>
+	  <h3 id="lightStatus"></h3>
+	  <br>
+    </p>
+  </body>
+</html>
